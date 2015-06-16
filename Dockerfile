@@ -5,4 +5,4 @@ MAINTAINER dockerlover@zju.edu.cn
 ADD ./Mongoexample .
 ADD tutorial/tuto_a.md .
 
-CMD Mongoexample && tail -f 
+CMD /Mongoexample && tail -f 
