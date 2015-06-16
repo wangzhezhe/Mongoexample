@@ -1,7 +1,8 @@
-FROM google/golang-runtime
+FROM google/golang
 
 MAINTAINER dockerlover@zju.edu.cn
 
-ADD Mongoexample .
+ADD ./Mongoexample .
+ADD tutorial/tuto_a.md .
 
-CMD /bin/bash
+CMD Mongoexample && tail -f 

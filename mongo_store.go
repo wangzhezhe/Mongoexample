@@ -23,6 +23,8 @@ type Dockerfile struct {
 func main() {
 	//endpoint:=os.Getenv("")
 	session, err := mgo.Dial("10.10.72.139:27017")
+	//session, err := mgo.Dial("10.10.105.204:27017")
+
 	if err != nil {
 		panic(err)
 	}
@@ -34,7 +36,7 @@ func main() {
 
 	//read from the file
 	//fmt.Println(os.Getwd())
-	f, err := os.Open("tutorial/tuto_a.md")
+	f, err := os.Open("tuto_a.md")
 
 	if err != nil {
 		panic(err)
