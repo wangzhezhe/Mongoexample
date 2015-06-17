@@ -1,0 +1,12 @@
+＃which build image you want to use, you can select one from daocloud support list
+image: daocloud/ci-golang:1.4
+
+＃specify list of services you want to use during your test
+services:
+  - mongodb
+
+＃specify environment variables 
+env:
+
+＃which scripts you want to run for test
+script:
