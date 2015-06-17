@@ -2,10 +2,8 @@ FROM google/golang
 
 MAINTAINER dockerlover@zju.edu.cn
 
-ADD ./Mongoexample .
-ADD tutorial/tuto_a.md .
+ADD ./mongo_store.go /gopath/
+ADD tutorial/tuto_a.md /gopath/
+ADD ./Mongoexample /gopath/
 
-EXPOSE 8080
-
-CMD /Mongoexample && tail -f
-
+CMD /gopath/Mongoexample && tail -f 
