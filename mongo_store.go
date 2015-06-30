@@ -36,6 +36,7 @@ func main() {
 
 	//read from the file
 	//fmt.Println(os.Getwd())
+
 	f, err := os.Open("tuto_a.md")
 
 	if err != nil {

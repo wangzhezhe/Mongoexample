@@ -4,7 +4,13 @@ MAINTAINER dockerlover@zju.edu.cn
 
 ADD ./mongo_store.go /gopath/
 ADD tutorial/tuto_a.md /gopath/
-ADD ./Mongoexample /gopath/
+ADD ./mongo_store.go /gopath/
+ADD ./gopkg.in /gopath/src/gopkg.in/
+
+WORKDIR /gopath/
+
+
+RUN go build mongo_store.go
 
 EXPOSE 8080
-CMD /gopath/Mongoexample && tail -f 
+CMD /gopath/mongo_store && tail -f 
