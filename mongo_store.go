@@ -33,13 +33,12 @@ func Config() {
 	username = os.Getenv("MONGODB_USERNAME")
 	password = os.Getenv("MONGODB_PASSWORD")
 	host = os.Getenv("MONGODB_PORT_27017_TCP_ADDR")
-	port = os.Getenv("MONGODB_PORT_27017_TCP_PORT")
 
 	if len(host) == 0 {
 		host = "localhost"
 	}
 
-	fmt.Println(port)
+	port = os.Getenv("MONGODB_PORT_27017_TCP_PORT")
 	if len(port) == 0 {
 		port = "27017"
 	}
@@ -51,6 +50,7 @@ func main() {
 
 	//os.Setenv("MONGODB_PORT_27017_TCP_ADDR", "10.10.105.204")
 	//os.Setenv("MONGODB_PORT_27017_TCP_PORT", "27017")
+	//os.Setenv("MONGODB_INSTANCE_NAME", "testinstance")
 
 	Config()
 
