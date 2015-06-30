@@ -65,7 +65,7 @@ func main() {
 		conn += "@"
 	}
 
-	conn += fmt.Sprintf("%s:%s", host, port)
+	conn += fmt.Sprintf("%s:%s/%s", host, port, instance)
 
 	fmt.Println("conn info:", conn)
 
@@ -81,7 +81,7 @@ func main() {
 
 	session.SetMode(mgo.Monotonic, true)
 	//切换到对应的数据库
-	c := session.DB("toturial").C("cmds")
+	c := session.DB(instance).C("cmds")
 
 	//read from the file
 	//fmt.Println(os.Getwd())
