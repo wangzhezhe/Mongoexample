@@ -48,6 +48,8 @@ func Config() {
 
 func main() {
 
+	Config()
+
 	conn := ""
 	if len(username) > 0 {
 		conn += username
@@ -60,7 +62,7 @@ func main() {
 	}
 
 	conn += fmt.Sprintf("%s:%s/%s", host, port, instance)
-
+	fmt.Println("conn info:", conn)
 	session, err := mgo.Dial(conn)
 
 	//session, err := mgo.Dial("10.10.72.139:27017")
